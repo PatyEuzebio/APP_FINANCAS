@@ -2,15 +2,13 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { useRouter } from 'next/navigation'
 import { createClient } from '@/lib/supabase/client'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
-import { TrendingUp, Eye, EyeOff, CheckCircle2 } from 'lucide-react'
+import { TrendingUp, Eye, EyeOff, Mail, AlertTriangle } from 'lucide-react'
 
 export default function SignupPage() {
-  const router = useRouter()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [confirmPassword, setConfirmPassword] = useState('')
@@ -18,6 +16,7 @@ export default function SignupPage() {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
   const [success, setSuccess] = useState(false)
+  const [registeredEmail, setRegisteredEmail] = useState('')
 
   async function handleSubmit(e: React.SyntheticEvent<HTMLFormElement>) {
     e.preventDefault()
@@ -53,22 +52,73 @@ export default function SignupPage() {
       return
     }
 
+    setRegisteredEmail(email)
     setSuccess(true)
     setLoading(false)
-
-    // Auto-redirect after sign up (if email confirmation is disabled in Supabase)
-    setTimeout(() => router.push('/dashboard'), 1500)
   }
 
   if (success) {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
-        <div className="text-center max-w-sm">
-          <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
-            <CheckCircle2 className="w-8 h-8 text-emerald-500" />
+        <div className="w-full max-w-md">
+          {/* Logo */}
+          <div className="text-center mb-8">
+            <Link href="/" className="inline-flex items-center gap-2">
+              <div className="w-10 h-10 bg-emerald-500 rounded-xl flex items-center justify-center">
+                <TrendingUp className="w-6 h-6 text-white" />
+              </div>
+              <span className="font-bold text-xl text-gray-900">FinançasPessoais</span>
+            </Link>
           </div>
-          <h2 className="text-xl font-bold text-gray-900 mb-2">Conta criada!</h2>
-          <p className="text-gray-500 text-sm">Redirecionando para o dashboard...</p>
+
+          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 text-center">
+            {/* Ícone */}
+            <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-5">
+              <Mail className="w-8 h-8 text-emerald-500" />
+            </div>
+
+            <h2 className="text-xl font-bold text-gray-900 mb-2">
+              Confirme seu e-mail
+            </h2>
+            <p className="text-gray-600 text-sm mb-5 leading-relaxed">
+              Enviamos um link de confirmação para:
+            </p>
+            <div className="bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 mb-5">
+              <span className="font-semibold text-gray-800 text-sm break-all">{registeredEmail}</span>
+            </div>
+            <p className="text-gray-500 text-sm mb-5 leading-relaxed">
+              Clique no link do e-mail para ativar sua conta e acessar o app.
+            </p>
+
+            {/* Aviso de spam */}
+            <div className="flex items-start gap-3 bg-amber-50 border border-amber-200 rounded-xl px-4 py-3 text-left mb-6">
+              <AlertTriangle className="w-4 h-4 text-amber-500 flex-shrink-0 mt-0.5" />
+              <div>
+                <p className="text-sm font-semibold text-amber-800 mb-0.5">
+                  Não encontrou o e-mail?
+                </p>
+                <p className="text-xs text-amber-700 leading-relaxed">
+                  Verifique a pasta de <strong>Spam</strong> ou <strong>Lixo eletrônico</strong> — às vezes o e-mail de confirmação vai parar lá.
+                </p>
+              </div>
+            </div>
+
+            <Link href="/login">
+              <Button variant="outline" className="w-full">
+                Já confirmei, ir para o login
+              </Button>
+            </Link>
+          </div>
+
+          <p className="text-center text-sm text-gray-500 mt-6">
+            E-mail errado?{' '}
+            <button
+              onClick={() => setSuccess(false)}
+              className="text-emerald-600 font-medium hover:underline"
+            >
+              Tentar novamente
+            </button>
+          </p>
         </div>
       </div>
     )
