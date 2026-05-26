@@ -46,7 +46,7 @@ export default function LandingPage() {
             <div className="w-8 h-8 bg-emerald-500 rounded-lg flex items-center justify-center">
               <TrendingUp className="w-5 h-5 text-white" />
             </div>
-            <span className="font-bold text-xl text-gray-900 dark:text-white">FinançasPessoais</span>
+            <span className="font-bold text-xl text-gray-900 dark:text-white">Trilha Financeira</span>
           </div>
           <nav className="hidden md:flex items-center gap-6">
             <a href="#features" className="text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
@@ -84,7 +84,7 @@ export default function LandingPage() {
             <span className="text-emerald-500">sem complicação</span>
           </h1>
           <p className="text-xl text-gray-500 dark:text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed">
-            Registre receitas e despesas, visualize seu saldo mensal e tome decisões financeiras melhores com o FinançasPessoais.
+            Registre receitas e despesas, visualize seu saldo mensal e tome decisões financeiras melhores com o Trilha Financeira.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/signup">
@@ -229,9 +229,9 @@ export default function LandingPage() {
           <div className="w-6 h-6 bg-emerald-500 rounded-md flex items-center justify-center">
             <TrendingUp className="w-3.5 h-3.5 text-white" />
           </div>
-          <span className="font-semibold text-gray-900 dark:text-white">FinançasPessoais</span>
+          <span className="font-semibold text-gray-900 dark:text-white">Trilha Financeira</span>
         </div>
-        <p className="text-sm text-gray-400 dark:text-gray-500">© 2025 FinançasPessoais. Todos os direitos reservados.</p>
+        <p className="text-sm text-gray-400 dark:text-gray-500">© 2025 Trilha Financeira. Todos os direitos reservados.</p>
       </footer>
     </div>
   )

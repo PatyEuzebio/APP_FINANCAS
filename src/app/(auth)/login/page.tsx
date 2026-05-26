@@ -52,7 +52,7 @@ export default function LoginPage() {
               <div className="w-10 h-10 bg-emerald-500 rounded-xl flex items-center justify-center">
                 <TrendingUp className="w-6 h-6 text-white" />
               </div>
-              <span className="font-bold text-xl text-gray-900 dark:text-white">FinançasPessoais</span>
+              <span className="font-bold text-xl text-gray-900 dark:text-white">Trilha Financeira</span>
             </Link>
             <h1 className="mt-6 text-2xl font-bold text-gray-900 dark:text-white">Bem-vindo de volta</h1>
             <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">Entre na sua conta para continuar</p>

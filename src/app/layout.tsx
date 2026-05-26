@@ -6,7 +6,7 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'FinançasPessoais — Controle financeiro simples',
+  title: 'Trilha Financeira — Controle financeiro simples',
   description:
     'Registre receitas e despesas, visualize seu saldo mensal e tome melhores decisões financeiras.',
 }

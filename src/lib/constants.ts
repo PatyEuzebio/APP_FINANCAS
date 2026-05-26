@@ -18,7 +18,7 @@ export const INCOME_CATEGORIES = [
   'Outros',
 ] as const
 
-export const ALL_CATEGORIES = [...INCOME_CATEGORIES, ...EXPENSE_CATEGORIES] as const
+export const ALL_CATEGORIES = Array.from(new Set([...INCOME_CATEGORIES, ...EXPENSE_CATEGORIES]))
 
 export const CATEGORY_COLORS: Record<string, string> = {
   Alimentação: '#f97316',

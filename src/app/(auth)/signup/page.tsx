@@ -71,7 +71,7 @@ export default function SignupPage() {
                 <div className="w-10 h-10 bg-emerald-500 rounded-xl flex items-center justify-center">
                   <TrendingUp className="w-6 h-6 text-white" />
                 </div>
-                <span className="font-bold text-xl text-gray-900 dark:text-white">FinançasPessoais</span>
+                <span className="font-bold text-xl text-gray-900 dark:text-white">Trilha Financeira</span>
               </Link>
             </div>
 
@@ -141,7 +141,7 @@ export default function SignupPage() {
               <div className="w-10 h-10 bg-emerald-500 rounded-xl flex items-center justify-center">
                 <TrendingUp className="w-6 h-6 text-white" />
               </div>
-              <span className="font-bold text-xl text-gray-900 dark:text-white">FinançasPessoais</span>
+              <span className="font-bold text-xl text-gray-900 dark:text-white">Trilha Financeira</span>
             </Link>
             <h1 className="mt-6 text-2xl font-bold text-gray-900 dark:text-white">Criar conta grátis</h1>
             <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">Comece a organizar suas finanças hoje</p>
