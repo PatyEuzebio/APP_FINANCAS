@@ -36,7 +36,7 @@ export function Sidebar({ userEmail }: SidebarProps) {
     <div className="flex flex-col h-full">
       {/* Logo */}
       <div className="flex items-center gap-3 px-6 py-5 border-b border-gray-100 dark:border-gray-800">
-        <div className="w-8 h-8 bg-emerald-500 rounded-lg flex items-center justify-center flex-shrink-0">
+        <div className="w-8 h-8 bg-orange-500 rounded-lg flex items-center justify-center flex-shrink-0">
           <TrendingUp className="w-5 h-5 text-white" />
         </div>
         <span className="font-bold text-gray-900 dark:text-white">Trilha Financeira</span>
@@ -52,7 +52,7 @@ export function Sidebar({ userEmail }: SidebarProps) {
             className={cn(
               'flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-colors',
               pathname === href
-                ? 'bg-emerald-50 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-400'
+                ? 'bg-orange-50 dark:bg-orange-950 text-orange-700 dark:text-orange-400'
                 : 'text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white'
             )}
           >
@@ -73,7 +73,7 @@ export function Sidebar({ userEmail }: SidebarProps) {
         {/* Avatar + email */}
         <div className="flex items-center gap-3 px-3 py-2">
           <Avatar className="w-8 h-8 flex-shrink-0">
-            <AvatarFallback className="bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-400 text-xs font-semibold">
+            <AvatarFallback className="bg-orange-100 dark:bg-orange-950 text-orange-700 dark:text-orange-400 text-xs font-semibold">
               {initials}
             </AvatarFallback>
           </Avatar>
@@ -104,7 +104,7 @@ export function Sidebar({ userEmail }: SidebarProps) {
       {/* Mobile top bar */}
       <div className="lg:hidden fixed top-0 left-0 right-0 h-14 bg-white dark:bg-gray-900 border-b border-gray-100 dark:border-gray-800 z-40 flex items-center px-4 justify-between">
         <div className="flex items-center gap-2">
-          <div className="w-7 h-7 bg-emerald-500 rounded-md flex items-center justify-center">
+          <div className="w-7 h-7 bg-orange-500 rounded-md flex items-center justify-center">
             <TrendingUp className="w-4 h-4 text-white" />
           </div>
           <span className="font-bold text-gray-900 dark:text-white text-sm">Trilha Financeira</span>

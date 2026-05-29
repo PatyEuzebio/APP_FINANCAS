@@ -97,7 +97,7 @@ export function DashboardClient() {
           <Button
             size="sm"
             onClick={handleNew}
-            className="bg-emerald-500 hover:bg-emerald-600 text-white gap-2"
+            className="bg-orange-500 hover:bg-orange-600 text-white gap-2"
           >
             <Plus className="w-4 h-4" />
             Nova transação

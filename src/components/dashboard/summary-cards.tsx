@@ -32,9 +32,9 @@ export function SummaryCards({ transactions }: SummaryCardsProps) {
       label: 'Receitas',
       value: summary.totalIncome,
       icon: TrendingUp,
-      colorClass: 'text-emerald-500',
-      bgClass: 'bg-emerald-50',
-      valueClass: 'text-emerald-600',
+      colorClass: 'text-orange-500',
+      bgClass: 'bg-orange-50',
+      valueClass: 'text-orange-600',
     },
     {
       label: 'Despesas',

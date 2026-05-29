@@ -139,7 +139,7 @@ export function TransactionModal({
               onClick={() => update('type', 'income')}
               className={`h-9 rounded-lg text-sm font-medium transition-colors border ${
                 form.type === 'income'
-                  ? 'bg-emerald-50 border-emerald-200 text-emerald-600'
+                  ? 'bg-orange-50 border-orange-200 text-orange-600'
                   : 'bg-white border-gray-200 text-gray-500 hover:bg-gray-50'
               }`}
             >
@@ -218,7 +218,7 @@ export function TransactionModal({
             <Button
               type="submit"
               disabled={loading}
-              className="flex-1 bg-emerald-500 hover:bg-emerald-600 text-white"
+              className="flex-1 bg-orange-500 hover:bg-orange-600 text-white"
             >
               {loading ? 'Salvando...' : transaction ? 'Atualizar' : 'Salvar'}
             </Button>

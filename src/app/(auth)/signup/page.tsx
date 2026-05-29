@@ -68,7 +68,7 @@ export default function SignupPage() {
           <div className="w-full max-w-md">
             <div className="text-center mb-8">
               <Link href="/" className="inline-flex items-center gap-2">
-                <div className="w-10 h-10 bg-emerald-500 rounded-xl flex items-center justify-center">
+                <div className="w-10 h-10 bg-orange-500 rounded-xl flex items-center justify-center">
                   <TrendingUp className="w-6 h-6 text-white" />
                 </div>
                 <span className="font-bold text-xl text-gray-900 dark:text-white">Trilha Financeira</span>
@@ -76,8 +76,8 @@ export default function SignupPage() {
             </div>
 
             <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 p-8 text-center">
-              <div className="w-16 h-16 bg-emerald-100 dark:bg-emerald-950 rounded-full flex items-center justify-center mx-auto mb-5">
-                <Mail className="w-8 h-8 text-emerald-500" />
+              <div className="w-16 h-16 bg-orange-100 dark:bg-orange-950 rounded-full flex items-center justify-center mx-auto mb-5">
+                <Mail className="w-8 h-8 text-orange-500" />
               </div>
 
               <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
@@ -118,7 +118,7 @@ export default function SignupPage() {
               E-mail errado?{' '}
               <button
                 onClick={() => setSuccess(false)}
-                className="text-emerald-600 dark:text-emerald-400 font-medium hover:underline"
+                className="text-orange-600 dark:text-orange-400 font-medium hover:underline"
               >
                 Tentar novamente
               </button>
@@ -138,7 +138,7 @@ export default function SignupPage() {
         <div className="w-full max-w-md">
           <div className="text-center mb-8">
             <Link href="/" className="inline-flex items-center gap-2">
-              <div className="w-10 h-10 bg-emerald-500 rounded-xl flex items-center justify-center">
+              <div className="w-10 h-10 bg-orange-500 rounded-xl flex items-center justify-center">
                 <TrendingUp className="w-6 h-6 text-white" />
               </div>
               <span className="font-bold text-xl text-gray-900 dark:text-white">Trilha Financeira</span>
@@ -210,7 +210,7 @@ export default function SignupPage() {
               <Button
                 type="submit"
                 disabled={loading}
-                className="w-full bg-emerald-500 hover:bg-emerald-600 text-white h-11"
+                className="w-full bg-orange-500 hover:bg-orange-600 text-white h-11"
               >
                 {loading ? 'Criando conta...' : 'Criar conta'}
               </Button>
@@ -219,7 +219,7 @@ export default function SignupPage() {
 
           <p className="text-center text-sm text-gray-500 dark:text-gray-400 mt-6">
             Já tem uma conta?{' '}
-            <Link href="/login" className="text-emerald-600 dark:text-emerald-400 font-medium hover:underline">
+            <Link href="/login" className="text-orange-600 dark:text-orange-400 font-medium hover:underline">
               Entrar
             </Link>
           </p>

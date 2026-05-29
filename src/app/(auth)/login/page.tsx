@@ -49,7 +49,7 @@ export default function LoginPage() {
           {/* Logo */}
           <div className="text-center mb-8">
             <Link href="/" className="inline-flex items-center gap-2">
-              <div className="w-10 h-10 bg-emerald-500 rounded-xl flex items-center justify-center">
+              <div className="w-10 h-10 bg-orange-500 rounded-xl flex items-center justify-center">
                 <TrendingUp className="w-6 h-6 text-white" />
               </div>
               <span className="font-bold text-xl text-gray-900 dark:text-white">Trilha Financeira</span>
@@ -108,7 +108,7 @@ export default function LoginPage() {
               <Button
                 type="submit"
                 disabled={loading}
-                className="w-full bg-emerald-500 hover:bg-emerald-600 text-white h-11"
+                className="w-full bg-orange-500 hover:bg-orange-600 text-white h-11"
               >
                 {loading ? 'Entrando...' : 'Entrar'}
               </Button>
@@ -117,7 +117,7 @@ export default function LoginPage() {
 
           <p className="text-center text-sm text-gray-500 dark:text-gray-400 mt-6">
             Não tem uma conta?{' '}
-            <Link href="/signup" className="text-emerald-600 dark:text-emerald-400 font-medium hover:underline">
+            <Link href="/signup" className="text-orange-600 dark:text-orange-400 font-medium hover:underline">
               Criar conta grátis
             </Link>
           </p>
